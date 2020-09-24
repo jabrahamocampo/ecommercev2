@@ -1,0 +1,9 @@
+com\jaom\entity\ProductCategories.class
+com\jaom\controller\ProductsCategoryController.class
+com\jaom\services\ProductsService.class
+com\jaom\AppMain.class
+com\jaom\repository\ProductCategoryRepository.class
+com\jaom\controller\ProductsController.class
+com\jaom\repository\ProductsRepository.class
+com\jaom\services\ProductCategoryService.class
+com\jaom\entity\Products.class

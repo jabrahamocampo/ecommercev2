@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New Product</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Create New Product</h1>
+		<br />
+		<form action="#" 
+			   th:action="@{/save}" 
+			    th:object="${product}"
+			     method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>SKU:</td>
+					<td><input type="text" th:field="*{productSKU}" /></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{productName}" /></td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="text" th:field="*{productPrice}" /></td>
+				</tr>
+				<tr>
+					<td>Weight:</td>
+					<td><input type="text" th:field="*{productWeight}" /></td>
+				</tr>
+				<tr>
+					<td>Car Desc:</td>
+					<td><input type="text" th:field="*{productCartDesc}" /></td>
+				</tr>
+				<tr>
+					<td>Short Desc:</td>
+					<td><input type="text" th:field="*{productShortDesc}" /></td>
+				</tr>
+				<tr>
+					<td>Long Desc:</td>
+					<td><input type="text" th:field="*{productLongDesc}" /></td>
+				</tr>
+				<tr>
+					<td>Thumb:</td>
+					<td><input type="text" th:field="*{productThumb}" /></td>
+				</tr>
+				<tr>
+					<td>Iamge:</td>
+					<td><input type="text" th:field="*{productImage}" /></td>
+				</tr>
+				<tr>
+					<td>Category:</td>
+					<td><select th:object="${listProdCat}">
+							<option th:each="category : ${listProdCat}" 
+									th:value="${category.categoryId}"
+									th:text="${category.CategoryName}">
+							</option>
+						</select>
+					</td> 
+				</tr>
+				<!--  <tr>
+					<td>Date:</td>
+					<td><input type="text" th:field="*{productWeight}" /></td>
+				</tr> -->
+				<tr>
+					<td>Stock:</td>
+					<td><input type="text" th:field="*{productStock}" /></td>
+				</tr>
+				<tr>
+					<td>Live:</td>
+					<td><input type="text" th:field="*{productLive}" /></td>
+				</tr>
+				<tr>
+					<td>Unlimited:</td>
+					<td><input type="text" th:field="*{productUnlimited}" /></td>
+				</tr>
+				<tr>
+					<td>Location:</td>
+					<td><input type="text" th:field="*{productLocation}" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
